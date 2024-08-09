@@ -19,6 +19,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.testcontainers.containers.MySQLContainer;
+import org.testcontainers.utility.DockerImageName;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -29,7 +30,8 @@ class CourseServiceApplicationTests {
     @Autowired
     private MockMvc mockMvc;
 
-    static MySQLContainer mySQLContainer = new MySQLContainer("mysql:latest");
+    //static MySQLContainer mySQLContainer = new MySQLContainer("mysql:latest");
+    static MySQLContainer mySQLContainer = new MySQLContainer("mysql:5.7.34");
 
 
     @DynamicPropertySource
